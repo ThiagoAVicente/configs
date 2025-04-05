@@ -1,0 +1,74 @@
+{
+  "tab_bar": {
+    "show": true
+  },
+  "assistant": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4"
+    },
+    "version": "2",
+    "rendering_markdown": true
+  },
+  "features": {
+    "inline_completion_provider": "none"
+  },
+  "project_panel": {
+    "dock": "right"
+  },
+  "autosave": {
+    "after_delay": { "milliseconds": 1500 }
+  },
+  "soft_wrap": "none",
+
+  //"vim_mode": true,
+  "ui_font_size": 14,
+  "buffer_font_size": 16,
+  "theme": {
+    "mode": "system",
+    "light": "One Dark",
+    "dark": "Catppuccin Macchiato (Blue Blur+)"
+  },
+  "scrollbar": {
+    "show": "never"
+  },
+  "tabs": { "file_icons": true },
+
+  "experimental.theme_overrides": {
+    //"background.appearance": "blurred",
+  },
+  "language_models": {
+    "copilot_chat": {}
+  },
+  "languages": {
+    "Markdown": {
+      "format_on_save": "on"
+    },
+    "Java": {
+      "format_on_save": "off"
+    }
+  },
+
+  "lsp": {
+    "texlab": {
+      "settings": {
+        "texlab": {
+          "build": {
+            "onSave": true,
+            "forwardSearchAfter": true
+          },
+          "forwardSearch": {
+            "executable": "zathura",
+            "args": [
+              "--synctex-forward",
+              "%l:1:%f",
+              "-x",
+              "zed %%{input}:%%{line}",
+              "%p"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
