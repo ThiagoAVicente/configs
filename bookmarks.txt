@@ -1,0 +1,9 @@
+Google:https://www.google.com
+YouTube:https://www.youtube.com/
+GitHub:https://github.com
+ArchWiki:https://wiki.archlinux.org
+Grok:https://grok.com/
+GhatGpt:https://chatgpt.com/
+WhatsApp:https://web.whatsapp.com/
+Paco:https://paco2.ua.pt/
+UA:https://elearning.ua.pt/my/

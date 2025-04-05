@@ -51,3 +51,5 @@ source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring
 bindkey "^[[3~" delete-char
 bindkey '^[[1;5A' history-substring-search-up
 bindkey '^[[1;5B' history-substring-search-down
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
