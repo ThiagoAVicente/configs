@@ -11,7 +11,7 @@
     "rendering_markdown": true
   },
   "features": {
-    "inline_completion_provider": "none"
+    "inline_completion_provider": "copilot"
   },
   "project_panel": {
     "dock": "right"
@@ -26,7 +26,7 @@
   "buffer_font_size": 16,
   "theme": {
     "mode": "system",
-    "light": "One Dark",
+    "light": "Catppuccin Espresso (Blur)",
     "dark": "Catppuccin Macchiato (Blue Blur+)"
   },
   "scrollbar": {

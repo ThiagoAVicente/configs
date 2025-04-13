@@ -19,5 +19,5 @@ alias p3="python3"
 alias show="kitten icat"
 alias sql-start='sudo systemctl start --now docker docker.service docker.socket&& docker start sql'
 alias sql-stop='docker stop sql && sudo systemctl stop --now docker.service docker.socket'
-alias open="xournalpp"
-
+alias open="okular"
+alias jjar="java -jar"

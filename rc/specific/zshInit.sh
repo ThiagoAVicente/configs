@@ -7,6 +7,7 @@ setopt HIST_IGNORE_ALL_DUPS  # Remove older duplicates
 setopt HIST_SAVE_NO_DUPS # Don’t save duplicates to file
 setopt APPEND_HISTORY    # Append to history file instead of overwriting
 setopt SHARE_HISTORY     # Share history across all Zsh sessions (optional)
+setopt NO_CASE_GLOB
 
 setopt NO_NOMATCH
 
