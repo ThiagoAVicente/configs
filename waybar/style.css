@@ -1,0 +1,152 @@
+@import "../../.cache/wal/colors-waybar.css";
+
+/*---GENERAL--------------------------------------------------------*/
+* {
+    font-family: JetBrainsMono;
+    font-size: 12px; /* Reduced font size */
+    font-weight: bold;
+    padding-top: 0px; /* Reduced padding */
+    padding-bottom: 1px; /* Reduced padding */
+}
+
+/*---BAR--------------------------------------------------------*/
+
+window#waybar {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/*---TOOLTIP--------------------------------------------------------*/
+tooltip {
+    background-color: @background;
+    border: 2px solid;
+    border-color: @foreground;
+}
+
+/*-Text-*/
+tooltip label {
+    color: @foreground;
+}
+
+/*---MAIN MODULES--------------------------------------------------------*/
+#custom-logo,
+#window,
+#workspaces,
+#workspaces button,
+#tray,
+#language,
+#custom-micro,
+#custom-mako,
+#custom-cava,
+#custom-swaync,
+#custom-powermenu,
+#pulseaudio,
+#battery,
+#network {
+    border-radius: 15px; /* Reduced border radius */
+    background-color: @background;
+    padding: 0 5px; /* Reduced padding */
+    margin: 3px; /* Reduced margin */
+    font-size: 14px; /* Reduced font size */
+    color: @foreground;
+}
+/*---BATTERY--------------------------------------------------------*/
+#battery {
+    background-color: @background;
+    padding: 0 5px;
+    margin: 2px;
+    font-size: 14px; /* Reduced font size */
+    color: @foreground;
+    border-radius: 15px; /* Reduced border radius */
+}
+
+/*---NETWORK--------------------------------------------------------*/
+#network {
+    background-color: @background;
+    padding: 0 5px;
+    margin: 2px;
+    font-size: 14px; /* Reduced font size */
+    color: @foreground;
+    border-radius: 15px; /* Reduced border radius */
+}
+
+/* Hover effect for battery and network */
+#battery:hover,
+#network:hover {
+    background-color: rgb(60, 60, 60);
+    color: @foreground;
+    border-radius: 15px;
+}
+
+#custom-weather,
+#clock {
+    background-color: @background;
+    padding-right: 0px;
+    margin: 0px;
+    font-size: 16px; /* Reduced font size */
+    color: @foreground;
+}
+
+#custom-powermenu {
+    padding-left: 9px;
+    padding-right: 10px;
+    margin-left: 0px;
+    font-size: 16px; /* Reduced font size */
+}
+
+#custom-weather,
+#clock,
+#custom-logo {
+    color: @foreground;
+    border-radius: 15px; /* Reduced border radius */
+}
+
+#workspaces button:hover,
+#workspaces button.active {
+    background-color: rgb(60, 60, 60);
+    color: @foreground;
+    border-radius: 15px; /* Reduced border radius */
+}
+
+#custom-micro {
+    font-size: 16px; /* Reduced font size */
+}
+
+#custom-logo {
+    padding: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px; /* Reduced font size */
+    margin-left: 5px;
+    margin-right: 1px;
+}
+
+#custom-weather,
+#clock {
+    margin: 2px; /* Reduced margin */
+    padding: 0 5px; /* Reduced padding */
+    border: 70px;
+}
+
+#custom-weather {
+    margin-left: 5px;
+}
+
+#custom-music {
+    background-color: @background;
+    padding: 0 5px; /* Reduced padding */
+    margin: 3px; /* Reduced margin */
+    font-size: 14px; /* Reduced font size */
+    color: @foreground;
+    border-radius: 15px; /* Reduced border radius */
+}
+
+#workspaces button {
+    padding: 0 3px; /* Reduced padding */
+    margin: 2px; /* Reduced margin */
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}

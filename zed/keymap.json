@@ -1,0 +1,55 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "bindings": {
+      "ctrl ctrl": "project_panel::ToggleFocus",
+      "ctrl ç": "workspace::ToggleRightDock",
+      "alt-f": "outline_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "shift shift": "file_finder::Toggle",
+      "ctrl-k": "terminal_panel::ToggleFocus",
+      "ctrl-enter": "project_panel::Open",
+      "ctrl-r": ["task::Spawn", { "task_name": "run file" }],
+      "ctrl-alt-w": "pane::CloseInactiveItems"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      // "j k": [2"workspace::SendKeystrokes", "escape"]
+    }
+  },
+  {
+    "context": "Editor && mode == full",
+    "bindings": {
+      "ctrl-'": "go_to_line::Toggle",
+      "ctrl-u": "editor::FindAllReferences",
+      "ctrl-w": "pane::CloseActiveItem",
+      "ctrl-n": "pane::ActivateNextItem",
+      "ctrl-p": "pane::ActivatePrevItem",
+      "ctrl-+": "pane::SplitRight",
+      "ctrl--": "pane::JoinAll",
+      "ctrl-y": "terminal_panel::ToggleFocus",
+      "alt-right": "editor::MoveToEndOfLine",
+      "alt-left": "editor::MoveToBeginningOfLine",
+      "alt-escape": "editor::MoveToBeginning",
+      "alt-delete": "editor::MoveToEnd"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-y": "terminal_panel::ToggleFocus"
+    }
+  }
+]

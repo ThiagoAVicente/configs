@@ -1,0 +1,13 @@
+Google:https://www.google.com
+YouTube:https://www.youtube.com/
+GitHub:https://github.com
+ArchWiki:https://wiki.archlinux.org
+Grok:https://grok.com/
+ChatGpt:https://chatgpt.com/
+WhatsApp:https://web.whatsapp.com/
+Paco:https://paco2.ua.pt/
+UA:https://elearning.ua.pt/my/
+PrimeVideo:https://www.primevideo.com/
+Crunchyroll:https://www.crunchyroll.com/pt-pt
+Netflix:https://www.netflix.com/
+Tetr.io:https://tetr.io/

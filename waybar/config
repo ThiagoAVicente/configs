@@ -1,0 +1,79 @@
+{
+// BAR SETTINGS
+    "layer": "top",
+    "position": "top",
+    "font-family": "Font Awesome 6 Free", 
+
+// MODULES
+    "modules-left": ["custom/logo", "hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["clock", ],
+    "modules-right": [ "pulseaudio", "network", "battery"  ],
+
+// LOGO
+    "custom/logo": {
+        "format": "󰈸",
+        "on-click": "sleep 0.1 && rofi -show drun",
+        "tooltip": false
+    },
+
+
+// CLOCK
+    "clock": {
+        "format": "{:%b %d %H:%M}",
+        "format-alt": "{:%A, %d %B, %Y (%R)}"
+    },
+
+// SOUND
+    "pulseaudio": {
+        "format": "{icon}   {volume}%",
+        "format-bluetooth": "{icon}    {volume}%",
+        "format-bluetooth-muted": "    {volume}",
+        "format-muted": "󰸈   {volume}%",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pamixer --toggle-mute",
+        "on-click-right": "pavucontrol",
+        "tooltip": false
+    },
+
+// HYPRLAND WINDOW TITLE
+"hyprland/window": {
+    "format": "{}",
+    "max-length": 60
+},
+
+// WORKSPACES
+"hyprland/workspaces": {
+  "format": "{name}",
+  "separator": false
+},
+"network": {
+    "interface": "wlan0", // Replace with your interface name, if different
+    "format-wifi": "   {essid}",
+    "format-wifi-no-network": "No Network",
+    "format-ethernet": " {interface}",
+    "on-click": "nm-connection-editor",
+    "tooltip": false
+},
+
+"battery": {
+    "format": "{capacity}% {icon}",
+    "format-charging": "{capacity}% {icon} (Charging)",
+    "format-discharging": "{capacity}% {icon}",
+    "icon-full": "",
+    "icon-charging": "",
+    "icon-discharging": "",
+    "tooltip": false,
+    "command": "acpi -b"
+
+}
+
+
+}
