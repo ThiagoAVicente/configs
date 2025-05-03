@@ -10,3 +10,4 @@ UA:https://elearning.ua.pt/my/
 PrimeVideo:https://www.primevideo.com/
 Crunchyroll:https://www.crunchyroll.com/pt-pt
 Netflix:https://www.netflix.com/
+Tetr.io:https://tetr.io/

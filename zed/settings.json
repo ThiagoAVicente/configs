@@ -26,7 +26,7 @@
   "buffer_font_size": 16,
   "theme": {
     "mode": "system",
-    "light": "Catppuccin Espresso (Blur)",
+    "light": "One Dark",
     "dark": "Catppuccin Macchiato (Blue Blur+)"
   },
   "scrollbar": {
