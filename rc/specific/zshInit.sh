@@ -19,7 +19,7 @@ compinit
 eval "$(starship init zsh)"
 eval "$(direnv hook zsh)"
 eval "$(jump shell zsh)"
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # Update PATHS
 export PATH="$PATH:/home/vcnt/.spicetify"
@@ -41,11 +41,9 @@ for file in ~/.config/rc/*; do
     fi
 done
 
-
-# plugins
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
 # binds

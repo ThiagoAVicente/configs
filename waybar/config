@@ -1,69 +1,74 @@
 {
-// BAR SETTINGS
-    "layer": "top",
-    "position": "top",
-    "font-family": "Font Awesome 6 Free", 
+  // BAR SETTINGS
+  "layer": "top",
+  "position": "top",
+  "width": "100%",
+  "font-family": "Font Awesome 6 Free",
 
-// MODULES
-    "modules-left": ["custom/logo", "hyprland/workspaces", "hyprland/window"],
-    "modules-center": ["clock", ],
-    "modules-right": [ "pulseaudio", "network", "battery"  ],
+  // MODULES
+  "modules-left": [ "hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["custom/spotify", "memory", "disk", "network", "pulseaudio", "battery"],
 
-// LOGO
-    "custom/logo": {
-        "format": "󰈸",
-        "on-click": "sleep 0.1 && rofi -show drun",
-        "tooltip": false
-    },
+	// CLOCK
+  "clock": {
+    "format": "{:%b %d %H:%M}",
+    "format-alt": "{:%A, %d %B, %Y (%R)}"
+  },
 
-
-// CLOCK
-    "clock": {
-        "format": "{:%b %d %H:%M}",
-        "format-alt": "{:%A, %d %B, %Y (%R)}"
-    },
-
-// SOUND
-    "pulseaudio": {
-        "format": "{icon}   {volume}%",
-        "format-bluetooth": "{icon}    {volume}%",
-        "format-bluetooth-muted": "    {volume}",
-        "format-muted": "󰸈   {volume}%",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
-        "on-click": "pamixer --toggle-mute",
-        "on-click-right": "pavucontrol",
-        "tooltip": false
-    },
-
-// HYPRLAND WINDOW TITLE
-"hyprland/window": {
+  // SPOTIFY (Shows only when playing)
+  "custom/spotify": {
+    "exec": "playerctl metadata --player=spotify --format '{{artist}} - {{title}}' || echo ''",
+    "interval": 5,
+    "return-type": "string",
     "format": "{}",
-    "max-length": 60
-},
-
-// WORKSPACES
-"hyprland/workspaces": {
-  "format": "{name}",
-  "separator": false
-},
-"network": {
-    "interface": "wlan0", // Replace with your interface name, if different
-    "format-wifi": "   {essid}",
-    "format-wifi-no-network": "No Network",
-    "format-ethernet": " {interface}",
-    "on-click": "nm-connection-editor",
     "tooltip": false
+  },
+
+  // MEMORY USAGE
+  "memory": {
+    "format": "󰍛 {used} / {total} RAM",
+    "tooltip": false
+  },
+
+  // DISK USAGE
+  "disk": {
+    "path": "/",
+    "format": "󰋊 {used}/{total}",
+    "tooltip": false
+  },
+
+  "network": {
+    "interface": "wlan0",  // Make sure to use the correct interface name
+    "format-wifi": "  {essid} | ↓{bandwidthDownBytes} ↑{bandwidthUpBytes} ",
+    "format-wifi-no-network": "No Network",
+    "tooltip": false,
+    "interval": 1
 },
 
-"battery": {
+
+  // PULSEAUDIO
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-bluetooth": "{icon}  {volume}%",
+    "format-bluetooth-muted": " {volume}",
+    "format-muted": "󰸈 {volume}%",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "on-click": "pamixer --toggle-mute",
+    "on-click-right": "pavucontrol",
+    "tooltip": false
+  },
+
+  // BATTERY
+  "battery": {
     "format": "{capacity}% {icon}",
     "format-charging": "{capacity}% {icon} (Charging)",
     "format-discharging": "{capacity}% {icon}",
@@ -72,8 +77,12 @@
     "icon-discharging": "",
     "tooltip": false,
     "command": "acpi -b"
+  },
 
-}
-
+  // HYPRLAND WORKSPACES
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "separator": false
+  },
 
 }

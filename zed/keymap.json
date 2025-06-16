@@ -36,15 +36,19 @@
       "ctrl-u": "editor::FindAllReferences",
       "ctrl-w": "pane::CloseActiveItem",
       "ctrl-n": "pane::ActivateNextItem",
-      "ctrl-p": "pane::ActivatePrevItem",
-      "ctrl-+": "pane::SplitRight",
-      "ctrl--": "pane::JoinAll",
+      "ctrl-p": "pane::ActivatePreviousItem",
       "ctrl-y": "terminal_panel::ToggleFocus",
       "alt-right": "editor::MoveToEndOfLine",
       "alt-left": "editor::MoveToBeginningOfLine",
       "alt-escape": "editor::MoveToBeginning",
       "alt-delete": "editor::MoveToEnd"
     }
+  },
+  {
+  "context": "Editor && showing_completions",
+  "bindings": {
+    "ctrl-tab":"editor::ComposeCompletion",
+  }
   },
   {
     "context": "Terminal",

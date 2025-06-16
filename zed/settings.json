@@ -2,31 +2,40 @@
   "tab_bar": {
     "show": true
   },
-  "assistant": {
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4"
+  "agent": {
+    "inline_assistant_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-7-sonnet-latest"
     },
-    "version": "2",
-    "rendering_markdown": true
+    "default_profile": "ask",
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4"
+    },
+    "version": "2"
   },
   "features": {
-    "inline_completion_provider": "copilot"
+    "edit_prediction_provider": "copilot"
   },
   "project_panel": {
-    "dock": "right"
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "right",
+    "auto_reveal_entries": true
   },
   "autosave": {
     "after_delay": { "milliseconds": 1500 }
   },
-  "soft_wrap": "none",
+  "soft_wrap": "preferred_line_length",
+  "preferred_line_length": 80,
 
-  //"vim_mode": true,
+  "vim_mode": false,
   "ui_font_size": 14,
   "buffer_font_size": 16,
   "theme": {
     "mode": "system",
-    "light": "One Dark",
+    "light": "Catppuccin Frappé (Blur)",
     "dark": "Catppuccin Macchiato (Blue Blur+)"
   },
   "scrollbar": {
@@ -67,6 +76,17 @@
               "%p"
             ]
           }
+        }
+      }
+    },
+    "pyright": {
+      "settings": {
+        "python.analysis": {
+          "diagnosticMode": "workspace",
+          "typeCheckingMode": "basic"
+        },
+        "python": {
+          "pythonPath": "venv/bin/python"
         }
       }
     }

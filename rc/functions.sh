@@ -50,13 +50,6 @@ cmp() {
 stts() {
     echo $(date)
     echo $(acpi)
-    network_name=$(wpa_cli status | grep "^ssid" | awk -F '=' '{print $2}')
-    if [ -n "$network_name" ]; then
-	    echo "connected ($network_name)"
-    else
-        echo "not connected"
-    fi
-
     volume_info=$(wpctl get-volume @DEFAULT_AUDIO_SINK@)
     volume_percentage=$(echo "$volume_info" | awk '{print $2 * 100 "%"}')
     muted_status=$(echo "$volume_info" | grep -q "\[MUTED\]" && echo "muted" || echo "unmuted")

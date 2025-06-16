@@ -1,9 +1,11 @@
 # BEGIN_KITTY_THEME
-# Hachiko
+# Alucard
 include current-theme.conf
-# END_KITTY_THEME 
+# END_KITTY_THEME
 
 kitty_mod ctrl+shift
+confirm_os_window_close 0
+enable_audio_bell no
 
 # FONTS
 font_family Hack Nerd Font
@@ -37,6 +39,10 @@ tab_activity_symbol *
 
 #MAP
 map F1 new_window_with_cwd
-map F2 launch --cwd=current /usr/bin/vi .
+map F2 launch --cwd=current /usr/bin/nvim .
 
-
+map ctrl+alt+n next_window
+map ctrlalt+p previous_window
+map ctrl+plus change_font_size all +2.0
+map ctrl+minus change_font_size all -2.0
+map ctrl+0 change_font_size all 0
